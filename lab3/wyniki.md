@@ -1,0 +1,36 @@
+Nikola Dujka   
+337553   
+python  
+https://github.com/Neonaaq/Ochrona-danych-studia
+
+# Zad 1
+
+Bloki były równe w trybie ECB, ponieważ ECB szyfruje bloki niezależnie. CBC natomiast najpierw xor-uje z poprzednim blokiem kryptogramu (IV dla pierwszego bloku).   
+Obydwa kryptogramy zostały odszyfrowane prawidłowo.
+
+# Zad 2
+
+Wszystkie testy przeszły pomyślnie.   
+Długość kryptogramu dla pustych danych: 16 bajtów   
+Długość kryptogramu dla bajtów "0123456789ABCDEF": 32 bajtów   
+Długość kryptogramu dla wiadomosc.txt: 256 bajty   
+   
+Dwa szyfrowania dla wiadomosc.txt z inną solą i IV wyszły inne. Wynika to z faktu, że sól i iv są pseudolosowe.   
+  
+IV jest używany w trybie CBC do zaszyfrowania pierwszego bloku.   
+Sól natomiast jest doklejana do hasła przed haszowaniem, dzięki czemu dwa takie same hasła dadzą inne klucze.
+
+# Zad 3
+
+5 najlepszych kandydatów:   
+Znak klucza: 'm'  Entropia H: 4.4536   
+Znak klucza: 'b'  Entropia H: 7.9472   
+Znak klucza: 'x'  Entropia H: 7.9490   
+Znak klucza: 'o'  Entropia H: 7.9493   
+Znak klucza: '2'  Entropia H: 7.9502   
+
+Znak klucza: 'm'   
+Pierwszy wiersz tekstu: Record 000. The archive contains laboratory notes about symmetric encryption and careful handling of binary files.
+
+Kluczy jest tylko 36, ponieważ według polecenia klucz to powtórzony znak ze zbioru o długości 36 znaków.   
+Dla danych skompresowanych ranking może zawieść, ponieważ skompresowane dane nie są językiem naturalnym, a losowymi znakami. Język naturany zawiera niższą entropię niż losowe znaki, ponieważ zawiera dużo powtarzających się liter i ma mniejszą losowość.
